@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `fsblog`;
-USE `fsblog`;
+CREATE DATABASE IF NOT EXISTS `myblog`;
+USE `myblog`;
 
 -- ----------------------------
 -- Table structure for admin_user

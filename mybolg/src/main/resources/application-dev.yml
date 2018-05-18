@@ -1,6 +1,6 @@
 spring:
   application:
-    name: FS-Blog
+    name: myblog
   cache:
     cache-names: ehcache
     ehcache:
@@ -54,7 +54,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     username: root
     password: root
-    url: jdbc:mysql://127.0.0.1:3306/fsblog?useUnicode:true&amp;characterEncoding:UTF-8
+    url: jdbc:mysql://127.0.0.1:3306/myblog?useUnicode:true&amp;characterEncoding:UTF-8
     driverClassName: com.mysql.jdbc.Driver
     sql-script-encoding: UTF-8
     hikari:
@@ -80,7 +80,7 @@ server:
         maxThreads: 12
         minSpareThreads: 3
         accesslog:
-          directory: /home/fullstack/app/fullstack
+          directory: D:\springboot\accesslog
           pattern: combined
           enabled: true
   session:
@@ -88,7 +88,7 @@ server:
       max-age: 1800
 
 logging:
-    config: classpath:log4j2.xml
+    config: classpath:logback.xml
 
 mybatis:
     type-aliases-package: com.wf.blog.entity
