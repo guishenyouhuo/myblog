@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>${title!'全栈之路-注册'}</title>
+  <title>${title!'MyBolg-注册'}</title>
 
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
 <body class="bg-dark">
   <div class="container">
     <div class="card card-register mx-auto mt-5">
-      <div class="card-header">Full-Stack</div>
+      <div class="card-header">MyBolg</div>
       <div class="card-body">
         <form id="id_user_register_form">
           <div class="form-group">

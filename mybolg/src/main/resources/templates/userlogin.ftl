@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>${title!'全栈之路-登录'}</title>
+    <title>${title!'MyBolg-登录'}</title>
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
 </#if>
 <#-- e 提示消息（用户名或密码错误） -->
     <div class="card card-login mx-auto mt-5">
-        <div class="card-header">Full-Stack</div>
+        <div class="card-header">MyBolg</div>
         <div class="card-body">
             <form id="id_form_login">
                 <div class="form-group">

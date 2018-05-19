@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>${articleTitle!'全栈博客'}</title>
+    <title>${articleTitle!'博客'}</title>
 
 <#-- EditorMD -->
     <link href="/vendor/editor/css/editormd.css" rel="stylesheet">
@@ -35,7 +35,7 @@
     <div class="container">
         <div class="row">
             <div class="col mx-auto text-left pl-5">
-                <h1>FS-Blog</h1>
+                <h1>MyBlog</h1>
                 <h3>记录技术成长点滴</h3>
             </div>
         </div>

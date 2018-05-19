@@ -171,6 +171,12 @@
       <version>${fastJson.version}</version>
     </dependency>
     
+    <!-- <dependency>  
+         <groupId>com.alibaba</groupId>  
+         <artifactId>druid</artifactId>  
+         <version>1.0.9</version>  
+     </dependency>   -->
+    
   </dependencies>
 
   <build>

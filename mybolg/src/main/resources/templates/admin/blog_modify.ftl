@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Full-Stack 系统后台管理</title>
+    <title>MyBolg 系统后台管理</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/vendor/admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">

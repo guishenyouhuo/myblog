@@ -17,23 +17,23 @@
                     </li>
                     <li class="list-inline-item">&sdot;</li>
                     <li class="list-inline-item">
-                        <a href="http://github.com/JamesZBL/FS-Blog" target="_blank" class="text-white">Github 项目</a>
+                        <a href="https://github.com/guishenyouhuo" target="_blank" class="text-white">Github 项目</a>
                     </li>
                 </ul>
-                <p class="text-muted small mb-4 mb-lg-0">&copy; JamesZBL 2017-2018 All Rights Reserved. </p>
-                <p class="text-muted small mb-4 mb-lg-0">冀 ICP 备 18000182 号</p>
+                <p class="text-muted small mb-4 mb-lg-0">&copy; guishenyouhuo 2017-2018 All Rights Reserved. </p>
+                <p class="text-muted small mb-4 mb-lg-0"> </p>
             </div>
             <div class="col-lg-6 text-center text-lg-right my-auto">
                 <ul class="list-inline mb-0">
                 <#-- github -->
                     <li class="list-inline-item mr-3">
-                        <a href="http://github.com/JamesZBL" target="_blank" class="text-white">
+                        <a href="https://github.com/guishenyouhuo" target="_blank" class="text-white">
                             <i class="fa fa-github fa-2x fa-fw"></i>
                         </a>
                     </li>
                 <#-- qq -->
                     <li class="list-inline-item mr-3">
-                        <a href="tencent://message/?uin=1146556298&Site=在线QQ&amp;Menu=yes" class="text-white">
+                        <a href="tencent://message/?uin=931263936&Site=在线QQ&amp;Menu=yes" class="text-white">
                             <i class="fa fa-qq fa-2x fa-fw"></i>
                         </a>
                     </li>
