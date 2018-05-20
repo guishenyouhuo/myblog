@@ -126,12 +126,6 @@
       <artifactId>mybatis-generator-core</artifactId>
       <version>1.3.5</version>
     </dependency>
-    <!-- mybatis-common-mapper-generator -->
-    <dependency>
-      <groupId>tk.mybatis</groupId>
-      <artifactId>mapper</artifactId>
-      <version>3.4.4</version>
-    </dependency>
     <!-- 运行环境(采用jar部署的方式时需要) -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
