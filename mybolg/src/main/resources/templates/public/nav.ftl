@@ -24,7 +24,12 @@
                 <li class="nav-item <#if page_index?? && page_index == 1>active</#if>">
                     <a class="nav-link" href="/post">博客</a>
                 </li>
-                <li class="nav-item <#if page_index?? && page_index == 2>active</#if>">
+                <#if Session ["session_current_user"]??>  
+				    <li class="nav-item <#if page_index?? && page_index == 2>active</#if>">
+	                    <a class="nav-link" href="/myblog/${Session ["session_current_user"].username}">我的博客</a>
+	                </li> 
+				</#if>
+                <li class="nav-item <#if page_index?? && page_index == 3>active</#if>">
                     <a class="nav-link" href="/resume">关于</a>
                 </li>
                 <li class="nav-item">
@@ -48,7 +53,7 @@
                             class="caret"></span></a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="#">我的资料</a>
-                        <a class="dropdown-item" href="#">消息</a>
+                        <a class="dropdown-item" href="/user/blogmanage">博客管理</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/usersignout.c">注销登录</a>
                     </div>

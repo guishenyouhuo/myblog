@@ -12,7 +12,7 @@ import com.wf.blog.entity.Article;
 /**
  * 博客批量管理列表视图
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Getter
 @Setter

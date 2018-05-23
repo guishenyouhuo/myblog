@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 后台用户服务
  *
- * @author James
+ * @author guishenyouhuo
  */
 public interface IAdminUserService {
 

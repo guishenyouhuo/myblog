@@ -6,7 +6,7 @@ import org.apache.ibatis.jdbc.SQL;
 /**
  * Article 动态 SQL 提供者
  *
- * @author James
+ * @author guishenyouhuo
  */
 public class ArticleSqlProvider {
 

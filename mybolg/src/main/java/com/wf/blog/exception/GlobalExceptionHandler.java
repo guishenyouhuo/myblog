@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 /**
  * 全局常量处理器
  *
- * @author James
+ * @author guishenyouhuo
  */
 @ControllerAdvice
 public class GlobalExceptionHandler {

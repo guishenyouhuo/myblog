@@ -11,6 +11,7 @@ import com.wf.blog.mapper.ArticleMapper;
 import com.wf.blog.mapper.TagArticleMapper;
 import com.wf.blog.mapper.TagMapper;
 import com.wf.blog.service.api.IAdminBlogService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,87 +22,104 @@ import java.util.List;
 /**
  * 后台博客服务实现类
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Service
 public class AdminBlogServiceImpl implements IAdminBlogService {
 
-  @Autowired
-  private ArticleMapper mArticleMapper;
-  @Autowired
-  private TagMapper mTagMapper;
+	@Autowired
+	private ArticleMapper mArticleMapper;
+	
+	@Autowired
+	private TagMapper mTagMapper;
+	
+	@Autowired
+	private TagArticleMapper mTagArticleMapper;
 
-  @Override
-  @Transactional(rollbackFor = Exception.class)
-  public void blogAdd(BlogAddForm form) {
-    Article article = new Article();
-    article.setTitle(form.getTitle());
-    article.setMdMaterial(form.getMdMaterial());
-    article.setHtmlMaterial(form.getHtmlMaterial());
-    article.setIntroduction(form.getDescription());
-    // 处理 article
-    mArticleMapper.insertSelective(article);
-    Integer articleId = article.getId();
-    // 处理 tags
-    String[] tags = form.getRawTags().split(",");
-    for (String item : tags) {
-      Tag expected = mTagMapper.selectTagByName(item);
-      if (null != expected) {
-        Integer id = expected.getId();
-        TagArticle tagArticle = new TagArticle();
-        tagArticle.setTagId(id);
-        tagArticle.setArticleId(articleId);
-        mTagArticleMapper.insertSelective(tagArticle);
-      } else {
-        Tag tag = new Tag();
-        tag.setName(item);
-        mTagMapper.insertSelective(tag);
-        Integer tagId = tag.getId();
-        TagArticle tagArticle = new TagArticle();
-        tagArticle.setTagId(tagId);
-        tagArticle.setArticleId(articleId);
-        mTagArticleMapper.insertSelective(tagArticle);
-      }
-    }
-  }
+	@Override
+	@Transactional(rollbackFor = Exception.class)
+	public void blogAdd(BlogAddForm form) {
+		Article article = new Article();
+		article.setTitle(form.getTitle());
+		article.setMdMaterial(form.getMdMaterial());
+		article.setHtmlMaterial(form.getHtmlMaterial());
+		article.setIntroduction(form.getDescription());
+		article.setUserName(form.getUserName());
+		article.setUserType(form.getUserType());
+		// 处理 article
+		mArticleMapper.insertSelective(article);
+		Integer articleId = article.getId();
+		// 处理 tags
+		String[] tags = form.getRawTags().split(",");
+		for (String item : tags) {
+			Tag expected = mTagMapper.selectTagByName(item);
+			if (null != expected) {
+				Integer id = expected.getId();
+				TagArticle tagArticle = new TagArticle();
+				tagArticle.setTagId(id);
+				tagArticle.setArticleId(articleId);
+				mTagArticleMapper.insertSelective(tagArticle);
+			} else {
+				Tag tag = new Tag();
+				tag.setName(item);
+				mTagMapper.insertSelective(tag);
+				Integer tagId = tag.getId();
+				TagArticle tagArticle = new TagArticle();
+				tagArticle.setTagId(tagId);
+				tagArticle.setArticleId(articleId);
+				mTagArticleMapper.insertSelective(tagArticle);
+			}
+		}
+	}
 
-  @Autowired
-  private TagArticleMapper mTagArticleMapper;
+	@Override
+	public Article blogSelectByPrimaryKey(Integer id) {
+		return mArticleMapper.selectByPrimaryKey(id);
+	}
 
-  @Override
-  public Article blogSelectByPrimaryKey(Integer id) {
-    return mArticleMapper.selectByPrimaryKey(id);
-  }
+	@Override
+	public List<ArticleDataGridView> getArticleList() {
+		List<Article> articleList = mArticleMapper.selectAll();
+		List<ArticleDataGridView> viewList = new ArrayList<>();
+		for (Article article : articleList) {
+			ArticleDataGridView view = new ArticleDataGridView(article);
+			viewList.add(view);
+		}
+		return viewList;
+	}
 
-  @Override
-  public List<ArticleDataGridView> getArticleList() {
-    List<Article> articleList = mArticleMapper.selectAll();
-    List<ArticleDataGridView> viewList = new ArrayList<>();
-    for (Article article : articleList) {
-      ArticleDataGridView view = new ArticleDataGridView(article);
-      viewList.add(view);
-    }
-    return viewList;
-  }
+	@Override
+	@Transactional(rollbackFor = Exception.class)
+	public void blogDelete(TableKeyModel model) {
+		List<Integer> idList = model.getIds();
+		for (Integer id : idList) {
+			mArticleMapper.deleteByPrimaryKey(id);
+		}
+	}
 
-  @Override
-  @Transactional(rollbackFor = Exception.class)
-  public void blogDelete(TableKeyModel model) {
-    List<Integer> idList = model.getIds();
-    for (Integer id : idList) {
-      mArticleMapper.deleteByPrimaryKey(id);
-    }
-  }
+	@Override
+	public void blogModify(BlogModifyForm form) {
+		Article article = new Article();
+		article.setId(form.getId());
+		article.setIntroduction(form.getDescription());
+		article.setHtmlMaterial(form.getHtmlMaterial());
+		article.setMdMaterial(form.getMdMaterial());
+		article.setTitle(form.getTitle());
+		article.setUserName(form.getUserName());
+		article.setUserType(form.getUserType());
+		// 更新数据库中的信息
+		mArticleMapper.updateByPrimaryKeySelective(article);
+	}
 
-  @Override
-  public void blogModify(BlogModifyForm form) {
-    Article article = new Article();
-    article.setId(form.getId());
-    article.setIntroduction(form.getDescription());
-    article.setHtmlMaterial(form.getHtmlMaterial());
-    article.setMdMaterial(form.getMdMaterial());
-    article.setTitle(form.getTitle());
-    // 更新数据库中的信息
-    mArticleMapper.updateByPrimaryKeySelective(article);
-  }
+	@Override
+	public List<ArticleDataGridView> getArticleListByUser(String userName,
+			String userType) {
+		List<Article> articleList = mArticleMapper.getArticleListByUser(userName, userType);
+		List<ArticleDataGridView> viewList = new ArrayList<>();
+		for (Article article : articleList) {
+			ArticleDataGridView view = new ArticleDataGridView(article);
+			viewList.add(view);
+		}
+		return viewList;
+	}
 }

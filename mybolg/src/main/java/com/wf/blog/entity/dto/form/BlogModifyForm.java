@@ -9,7 +9,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 /**
  * 修改博客表单
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Setter
 @Getter
@@ -17,32 +17,42 @@ import org.hibernate.validator.constraints.NotEmpty;
 @AllArgsConstructor
 public class BlogModifyForm {
 
-  /**
-   * 所修改博客的 id
-   */
-  @NotEmpty
-  private Integer id;
+	/**
+	 * 所修改博客的 id
+	 */
+	@NotEmpty
+	private Integer id;
 
-  /**
-   * 文章标题
-   */
-  @NotEmpty
-  private String title;
-  /**
-   * markdown 内容
-   */
-  private String mdMaterial;
-  /**
-   * markdown 转 html 后的内容
-   */
-  private String htmlMaterial;
-  /**
-   * 文章内容描述
-   */
-  private String description;
+	/**
+	 * 文章标题
+	 */
+	@NotEmpty
+	private String title;
+	/**
+	 * markdown 内容
+	 */
+	private String mdMaterial;
+	/**
+	 * markdown 转 html 后的内容
+	 */
+	private String htmlMaterial;
+	/**
+	 * 文章内容描述
+	 */
+	private String description;
 
-  /**
-   * 原始 tags
-   */
-  private String rawTags;
+	/**
+	 * 作者名
+	 */
+	private String userName;
+
+	/**
+	 * 作者类型
+	 */
+	private String userType;
+
+	/**
+	 * 原始 tags
+	 */
+	private String rawTags;
 }

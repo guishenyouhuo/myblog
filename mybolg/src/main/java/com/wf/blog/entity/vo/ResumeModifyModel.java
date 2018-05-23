@@ -11,7 +11,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  * 简历修改表单
  * <p>
  *
- * @author James
+ * @author guishenyouhuo
  * @date 17-12-4
  */
 @Setter

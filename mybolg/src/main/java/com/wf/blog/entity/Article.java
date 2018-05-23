@@ -6,136 +6,160 @@ import javax.persistence.*;
 /**
  * 文章类
  *
- * @author James
+ * @author guishenyouhuo
  */
 public class Article {
 
-  /**
-   * PrimaryKey
-   */
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
+	/**
+	 * PrimaryKey
+	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 
-  private String title;
+	private String title;
 
-  @Column(name = "gmt_create")
-  private Date gmtCreate;
+	@Column(name = "gmt_create")
+	private Date gmtCreate;
 
-  @Column(name = "gmt_modified")
-  private Date gmtModified;
+	@Column(name = "gmt_modified")
+	private Date gmtModified;
 
-  private String introduction;
+	private String introduction;
 
-  /**
-   * 文章内容
-   */
-  @Column(name = "md_material")
-  private String mdMaterial;
+	@Column(name = "user_name")
+	private String userName;
 
-  /**
-   * html 文章内容
-   */
-  @Column(name = "html_material")
-  private String htmlMaterial;
+	@Column(name = "user_type")
+	private String userType;
 
-  /**
-   * 获取PrimaryKey
-   *
-   * @return id - PrimaryKey
-   */
-  public Integer getId() {
-    return id;
-  }
+	/**
+	 * 文章内容
+	 */
+	@Column(name = "md_material")
+	private String mdMaterial;
 
-  /**
-   * 设置PrimaryKey
-   *
-   * @param id PrimaryKey
-   */
-  public void setId(Integer id) {
-    this.id = id;
-  }
+	/**
+	 * html 文章内容
+	 */
+	@Column(name = "html_material")
+	private String htmlMaterial;
 
-  /**
-   * @return title
-   */
-  public String getTitle() {
-    return title;
-  }
+	/**
+	 * 获取PrimaryKey
+	 *
+	 * @return id - PrimaryKey
+	 */
+	public Integer getId() {
+		return id;
+	}
 
-  /**
-   * @param title
-   */
-  public void setTitle(String title) {
-    this.title = title == null ? null : title.trim();
-  }
+	/**
+	 * 设置PrimaryKey
+	 *
+	 * @param id
+	 *            PrimaryKey
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-  /**
-   * @return gmt_create
-   */
-  public Date getGmtCreate() {
-    return gmtCreate;
-  }
+	/**
+	 * @return title
+	 */
+	public String getTitle() {
+		return title;
+	}
 
-  /**
-   * @param gmtCreate
-   */
-  public void setGmtCreate(Date gmtCreate) {
-    this.gmtCreate = gmtCreate;
-  }
+	/**
+	 * @param title
+	 */
+	public void setTitle(String title) {
+		this.title = title == null ? null : title.trim();
+	}
 
-  /**
-   * @return gmt_modified
-   */
-  public Date getGmtModified() {
-    return gmtModified;
-  }
+	/**
+	 * @return gmt_create
+	 */
+	public Date getGmtCreate() {
+		return gmtCreate;
+	}
 
-  /**
-   * @param gmtModified
-   */
-  public void setGmtModified(Date gmtModified) {
-    this.gmtModified = gmtModified;
-  }
+	/**
+	 * @param gmtCreate
+	 */
+	public void setGmtCreate(Date gmtCreate) {
+		this.gmtCreate = gmtCreate;
+	}
 
-  /**
-   * @return introduction
-   */
-  public String getIntroduction() {
-    return introduction;
-  }
+	/**
+	 * @return gmt_modified
+	 */
+	public Date getGmtModified() {
+		return gmtModified;
+	}
 
-  /**
-   * @param introduction
-   */
-  public void setIntroduction(String introduction) {
-    this.introduction = introduction == null ? null : introduction.trim();
-  }
+	/**
+	 * @param gmtModified
+	 */
+	public void setGmtModified(Date gmtModified) {
+		this.gmtModified = gmtModified;
+	}
 
-  /**
-   * 获取文章内容
-   *
-   * @return md_material - 文章内容
-   */
-  public String getMdMaterial() {
-    return mdMaterial;
-  }
+	/**
+	 * @return introduction
+	 */
+	public String getIntroduction() {
+		return introduction;
+	}
 
-  /**
-   * 设置文章内容
-   *
-   * @param mdMaterial 文章内容
-   */
-  public void setMdMaterial(String mdMaterial) {
-    this.mdMaterial = mdMaterial == null ? null : mdMaterial.trim();
-  }
+	/**
+	 * @param introduction
+	 */
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction == null ? null : introduction.trim();
+	}
 
-  public String getHtmlMaterial() {
-    return htmlMaterial;
-  }
+	/**
+	 * 获取文章内容
+	 *
+	 * @return md_material - 文章内容
+	 */
+	public String getMdMaterial() {
+		return mdMaterial;
+	}
 
-  public void setHtmlMaterial(String htmlMaterial) {
-    this.htmlMaterial = htmlMaterial;
-  }
+	/**
+	 * 设置文章内容
+	 *
+	 * @param mdMaterial
+	 *            文章内容
+	 */
+	public void setMdMaterial(String mdMaterial) {
+		this.mdMaterial = mdMaterial == null ? null : mdMaterial.trim();
+	}
+
+	public String getHtmlMaterial() {
+		return htmlMaterial;
+	}
+
+	public void setHtmlMaterial(String htmlMaterial) {
+		this.htmlMaterial = htmlMaterial;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
+	}
 }

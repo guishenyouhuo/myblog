@@ -8,7 +8,7 @@ import com.wf.blog.entity.dto.response.SimpleResponse;
 /**
  * Json 实体工厂类接口
  *
- * @author James
+ * @author guishenyouhuo
  */
 public interface JsonFactory {
 

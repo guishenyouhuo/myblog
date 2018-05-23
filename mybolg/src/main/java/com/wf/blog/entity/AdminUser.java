@@ -11,7 +11,7 @@ import javax.persistence.*;
 /**
  * 管理员用户类
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Component
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)

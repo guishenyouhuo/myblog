@@ -6,7 +6,7 @@ import javax.persistence.*;
 /**
  * 普通用户类
  *
- * @author James
+ * @author guishenyouhuo
  */
 public class User {
 

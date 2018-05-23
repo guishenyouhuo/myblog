@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * 后台用户服务实现类
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Service
 public class AdminUserServiceImpl implements IAdminUserService {

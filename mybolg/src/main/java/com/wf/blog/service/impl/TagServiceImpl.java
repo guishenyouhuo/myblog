@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * 文章标签相关业务实现类
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Service
 public class TagServiceImpl extends BaseViewTransableService<Tag, TagView> implements ITagService {

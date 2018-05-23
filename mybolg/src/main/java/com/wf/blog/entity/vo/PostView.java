@@ -9,7 +9,7 @@ import org.apache.commons.lang3.time.DateFormatUtils;
 /**
  * 博客列表视图
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Getter
 @Setter

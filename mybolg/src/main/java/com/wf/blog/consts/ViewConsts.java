@@ -3,7 +3,7 @@ package com.wf.blog.consts;
 /**
  * 视图中用到的模型名常量
  *
- * @author James
+ * @author guishenyouhuo
  */
 public class ViewConsts {
 

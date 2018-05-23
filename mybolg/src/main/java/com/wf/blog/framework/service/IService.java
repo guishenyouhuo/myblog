@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @param <T> 实体类型
  *
- * @author James
+ * @author guishenyouhuo
  */
 public interface IService<T> {
 

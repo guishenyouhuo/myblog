@@ -22,7 +22,7 @@ import com.wf.blog.entity.dto.form.ResumeModifyForm;
 /**
  * 简历业务接口
  *
- * @author JamesZBL
+ * @author guishenyouhuoZBL
  * @date 2018-03-28
  */
 public interface IResumeService {

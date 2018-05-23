@@ -30,7 +30,7 @@ import javax.validation.Valid;
 /**
  * 后台控制器
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Controller
 @RequestMapping("/admin")

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 批量操作对主键的封装
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Getter
 @Setter

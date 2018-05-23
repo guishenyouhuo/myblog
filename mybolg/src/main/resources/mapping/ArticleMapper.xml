@@ -10,6 +10,8 @@
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
     <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
     <result column="introduction" jdbcType="LONGVARCHAR" property="introduction" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_type" jdbcType="VARCHAR" property="userType" />
     <result column="md_material" jdbcType="LONGVARCHAR" property="mdMaterial" />
     <result column="html_material" jdbcType="LONGVARCHAR" property="htmlMaterial" />
   </resultMap>

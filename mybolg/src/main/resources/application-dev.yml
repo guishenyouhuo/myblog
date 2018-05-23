@@ -14,22 +14,7 @@ spring:
     suffix: .ftl
     charset: utf-8
     ######## todo 发布版本时同步更新 ***-prod.yml ########
-    view-names: index,
-                error,
-                userlogin,
-                adminlogin,
-                register,
-                article,
-                posts,
-                resume,
-                admin/index,
-                admin/userlogin,
-                admin/blogadd,
-                admin/blog_manage,
-                admin/blog_modify,
-                admin/admin_user_manage,
-                admin/admin_user_pwd_modify,
-                admin/resume_modify
+    
     #####################################
     content-type: text/html
     allow-request-override: true

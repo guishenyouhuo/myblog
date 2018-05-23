@@ -9,7 +9,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 /**
  * 修改简历表单
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Setter
 @Getter

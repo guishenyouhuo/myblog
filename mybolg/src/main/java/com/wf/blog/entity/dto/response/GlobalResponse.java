@@ -6,7 +6,7 @@ import lombok.Setter;
 /**
  * 统一 Json 范围实体类
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Getter
 @Setter

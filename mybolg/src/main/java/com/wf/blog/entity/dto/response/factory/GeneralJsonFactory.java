@@ -11,7 +11,7 @@ import static com.wf.blog.consts.StatusCode.*;
 /**
  * 通用 Json 工厂类
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Component(value = "generalJsonFactory")
 public class GeneralJsonFactory implements JsonFactory {

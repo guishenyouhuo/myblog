@@ -3,7 +3,7 @@ package com.wf.blog.consts;
 /**
  * URL 常量
  *
- * @author James
+ * @author guishenyouhuo
  */
 public class UrlConsts {
 

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 文章标签相关业务接口
  *
- * @author James
+ * @author guishenyouhuo
  */
 public interface ITagService {
 

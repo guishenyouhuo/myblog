@@ -3,7 +3,7 @@ package com.wf.blog.entity.dto.response;
 /**
  * 简单 Json 响应类
  *
- * @author James
+ * @author guishenyouhuo
  */
 public class SimpleResponse extends GlobalResponse {
 

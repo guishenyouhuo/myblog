@@ -15,7 +15,7 @@ import tk.mybatis.spring.mapper.MapperScannerConfigurer;
  * 如果你不使用通用Mapper，可以改为org.xxx...
  * 由于MapperScannerConfigurer执行的比较早，所以必须有下面的注解 @AutoConfigureAfter
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Configuration
 @AutoConfigureAfter(MybatisAutoConfiguration.class)

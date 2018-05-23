@@ -6,7 +6,7 @@ import com.wf.blog.framework.mapper.IMyMapper;
 /**
  * 简历
  *
- * @author James
+ * @author guishenyouhuo
  */
 public interface ResumeMapper extends IMyMapper<Resume> {
 

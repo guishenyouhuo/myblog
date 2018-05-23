@@ -12,7 +12,7 @@ import tk.mybatis.mapper.common.ids.SelectByIdsMapper;
  * 其他 Mapper 接口需集成本接口
  *
  * @param <T> 实体类型
- * @author James
+ * @author guishenyouhuo
  * 此接口不能被扫描到，否则出错
  */
 public interface IMyMapper<T> extends

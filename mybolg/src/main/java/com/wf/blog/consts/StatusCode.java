@@ -3,7 +3,7 @@ package com.wf.blog.consts;
 /**
  * 响应状态常量类
  *
- * @author James
+ * @author guishenyouhuo
  */
 public class StatusCode {
 

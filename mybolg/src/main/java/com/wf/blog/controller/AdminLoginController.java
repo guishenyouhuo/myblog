@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * 后台登录控制器
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Controller
 public class AdminLoginController extends BaseController {

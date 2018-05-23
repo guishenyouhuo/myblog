@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 博客服务接口
  *
- * @author James
+ * @author guishenyouhuo
  */
 public interface IPostsService {
 
@@ -18,7 +18,7 @@ public interface IPostsService {
    *
    * @return 博客视图实体集合
    */
-  List<PostView> getPostList();
+  List<PostView> getPostList(String userName);
 
   /**
    * 根据日期条件获取博客

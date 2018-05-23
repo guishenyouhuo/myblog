@@ -6,7 +6,7 @@ import javax.persistence.*;
 /**
  * 文章标签和文章关联的表
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Table(name = "tag_article")
 public class TagArticle {

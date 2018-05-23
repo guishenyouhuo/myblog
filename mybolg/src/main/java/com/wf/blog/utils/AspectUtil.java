@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 /**
  * 切面操作工具
  *
- * @author James
+ * @author guishenyouhuo
  */
 public class AspectUtil {
 

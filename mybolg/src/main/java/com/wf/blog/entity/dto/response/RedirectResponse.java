@@ -6,7 +6,7 @@ import lombok.Setter;
 /**
  * 登录返回 Json
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Setter
 @Getter

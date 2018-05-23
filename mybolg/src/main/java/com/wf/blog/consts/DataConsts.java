@@ -3,7 +3,7 @@ package com.wf.blog.consts;
 /**
  * 关于数据的常量类
  *
- * @author James
+ * @author guishenyouhuo
  */
 public class DataConsts {
 

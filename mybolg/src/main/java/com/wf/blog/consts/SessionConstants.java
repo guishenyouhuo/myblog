@@ -3,7 +3,7 @@ package com.wf.blog.consts;
 /**
  * 关于 Sesion 的全局常量
  *
- * @author James
+ * @author guishenyouhuo
  */
 public class SessionConstants {
 

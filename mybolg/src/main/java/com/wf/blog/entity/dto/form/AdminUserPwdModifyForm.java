@@ -11,7 +11,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 /**
  * 后台用户密码修改
  *
- * @author James
+ * @author guishenyouhuo
  * @date 18-1-25
  */
 @Getter

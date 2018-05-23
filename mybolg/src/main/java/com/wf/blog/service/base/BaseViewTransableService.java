@@ -8,7 +8,7 @@ import java.util.List;
  * @param <E> 数据查询结果实体类
  * @param <V> 视图类
  *
- * @author James
+ * @author guishenyouhuo
  */
 public abstract class BaseViewTransableService<E, V> {
 

@@ -6,7 +6,7 @@ import javax.persistence.*;
 /**
  * 文章标签类
  *
- * @author James
+ * @author guishenyouhuo
  */
 public class Tag {
 

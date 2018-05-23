@@ -7,6 +7,10 @@ $(function () {
         width: "100%",
         height: 640,
         syncScrolling: "single",
+        //启动本地图片上传功能
+        imageUpload: true,
+        imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+        imageUploadURL : "/uploadfile", //文件提交请求路径
         path: "/vendor/editor/lib/",
         saveHTMLToTextarea: true
     });

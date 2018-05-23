@@ -11,7 +11,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 /**
  * 用户注册表单
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Getter
 @Setter

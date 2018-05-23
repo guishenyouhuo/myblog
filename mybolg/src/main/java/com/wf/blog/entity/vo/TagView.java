@@ -9,7 +9,7 @@ import com.wf.blog.entity.Tag;
 /**
  * 文章标签视图
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Getter
 @Setter

@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * 用户信息操作业务实现类
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Service
 public class UserServiceImpl implements IUserService {

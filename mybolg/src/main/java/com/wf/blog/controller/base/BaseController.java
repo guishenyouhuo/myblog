@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 控制器基类
  *
- * @author James
+ * @author guishenyouhuo
  */
 public class BaseController {
 

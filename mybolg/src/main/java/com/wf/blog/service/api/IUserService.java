@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 用户信息操作接口
  *
- * @author James
+ * @author guishenyouhuo
  */
 public interface IUserService {
 

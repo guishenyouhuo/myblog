@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 /**
- * @author James
+ * @author guishenyouhuo
  */
 public interface TagMapper extends IMyMapper<Tag> {
 

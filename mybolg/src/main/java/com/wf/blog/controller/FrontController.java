@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 前台页面控制器
  *
- * @author James
+ * @author guishenyouhuo
  */
 @Controller
 public class FrontController extends BaseController {

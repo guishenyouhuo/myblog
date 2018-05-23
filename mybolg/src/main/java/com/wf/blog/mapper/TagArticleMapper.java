@@ -4,7 +4,7 @@ import com.wf.blog.entity.TagArticle;
 import com.wf.blog.framework.mapper.IMyMapper;
 
 /**
- * @author James
+ * @author guishenyouhuo
  */
 public interface TagArticleMapper extends IMyMapper<TagArticle> {
 }

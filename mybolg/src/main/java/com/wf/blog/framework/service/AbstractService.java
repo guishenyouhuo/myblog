@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @param <T>
  *
- * @author James
+ * @author guishenyouhuo
  */
 
 public abstract class AbstractService<T> implements IService<T> {
