@@ -18,18 +18,18 @@
                 <li class="nav-item">
                     <a class="nav-link"><#-- 占位 --></a>
                 </li>
-                <li class="nav-item <#if page_index?? && page_index == 0>active</#if>">
+                <li class="nav-item">
                     <a class="nav-link" href="/">首页</a>
                 </li>
-                <li class="nav-item <#if page_index?? && page_index == 1>active</#if>">
+                <li class="nav-item">
                     <a class="nav-link" href="/post">博客</a>
                 </li>
                 <#if Session ["session_current_user"]??>  
-				    <li class="nav-item <#if page_index?? && page_index == 2>active</#if>">
+				    <li class="nav-item">
 	                    <a class="nav-link" href="/myblog/${Session ["session_current_user"].username}">我的博客</a>
 	                </li> 
 				</#if>
-                <li class="nav-item <#if page_index?? && page_index == 3>active</#if>">
+                <li class="nav-item">
                     <a class="nav-link" href="/resume">关于</a>
                 </li>
                 <li class="nav-item">
