@@ -173,23 +173,6 @@
      </dependency>   -->
     
   </dependencies>
-
-  <!-- <build>
-    <finalName>mybolg</finalName>
-    <plugins>
-	<plugin>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-maven-plugin</artifactId>
-		<executions>
-			<execution>
-				<goals>
-					<goal>repackage</goal>
-				</goals>
-			</execution>
-		</executions>
-	</plugin>
-	</plugins>  
-  </build> -->
   
   <build>  
     <!--打包后的项目名称  -->  
