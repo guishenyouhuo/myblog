@@ -174,7 +174,7 @@
     
   </dependencies>
 
-  <build>
+  <!-- <build>
     <finalName>mybolg</finalName>
     <plugins>
 	<plugin>
@@ -188,6 +188,96 @@
 			</execution>
 		</executions>
 	</plugin>
-</plugins>  
-  </build>
+	</plugins>  
+  </build> -->
+  
+  <build>  
+    <!--打包后的项目名称  -->  
+    <finalName>myblog</finalName>  
+    <resources>  
+        <resource>  
+            <directory>src/main/resources</directory>  
+            <targetPath>${basedir}/target/classes</targetPath>
+            <filtering>true</filtering>  
+        </resource>  
+        <resource>  
+            <directory>src/main/java</directory>  
+            <targetPath>${basedir}/target/classes</targetPath>
+            <includes>  
+                <include>**/*.xml</include>  
+            </includes>
+            <excludes>
+            	<exclude>mybatisGenerator/**</exclude>
+            	<exclude>config/**</exclude> 
+            	<exclude>*.yml</exclude>
+            </excludes>  
+            <filtering>true</filtering>  
+        </resource>
+    </resources>  
+    <plugins>  
+        <!-- java编译插件 -->  
+        <plugin>  
+            <groupId>org.apache.maven.plugins</groupId>  
+            <artifactId>maven-compiler-plugin</artifactId>  
+            <configuration>  
+                <source>1.8</source>  
+                <target>1.8</target>  
+                <encoding>UTF-8</encoding>  
+            </configuration>  
+        </plugin>  
+        <!-- 打jar包的插件 -->  
+        <plugin>  
+            <groupId>org.apache.maven.plugins</groupId>  
+            <artifactId>maven-jar-plugin</artifactId>  
+            <configuration>  
+                <archive>  
+                    <manifest>  
+                        <addClasspath>true</addClasspath>  
+                        <classpathPrefix>lib</classpathPrefix>  
+                        <!-- 程序启动入口 -->  
+                        <mainClass>com.wf.blog.Application</mainClass>  
+                    </manifest>  
+                    <manifestEntries>  
+                        <Class-Path>./</Class-Path>  
+                    </manifestEntries>  
+                </archive>  
+            </configuration>
+            <executions>
+            	<execution>
+            		<phase>prepare-package</phase>
+            		<goals>
+            			<goal>jar</goal>
+            		</goals>
+            		<configuration>
+            			<excludes>
+			            	<exclude>mybatisGenerator/**</exclude>
+			            	<exclude>config/**</exclude>
+			            	<exclude>*.properties</exclude>
+			            </excludes> 
+            		</configuration>
+            	</execution>
+            </executions>  
+        </plugin>  
+        <plugin>    
+            <artifactId>maven-assembly-plugin</artifactId>    
+            <configuration>    
+                <!-- not append assembly id in release file name -->    
+                <appendAssemblyId>false</appendAssemblyId>    
+                <descriptors>    
+                    <!-- 注意这里的路径 -->  
+                    <descriptor>src/main/build/package.xml</descriptor>    
+                </descriptors>    
+            </configuration>  
+            <executions>    
+                <execution>    
+                    <id>make-assembly</id>    
+                    <phase>package</phase>    
+                    <goals>    
+                        <goal>single</goal>    
+                    </goals>    
+                </execution>    
+            </executions>    
+        </plugin>   
+    </plugins>  
+  </build>  
 </project>
