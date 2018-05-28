@@ -7,4 +7,4 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js" integrity="sha384-3ziFidFTgxJXHMDttyPJKDuTlmxJlwbSkojudK/CkRqKDOmeSbN6KLrGdrBQnT2n" crossorigin="anonymous"></script>
 
 <#-- Fotter -->
-<script src="/js/f_footer.js"></script>
+<script src="${basePath}/js/f_footer.js"></script>

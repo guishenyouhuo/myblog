@@ -10,8 +10,8 @@ $(function () {
         //启动本地图片上传功能
         imageUpload: true,
         imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-        imageUploadURL : "/uploadfile", //文件提交请求路径
-        path: "../vendor/editor/lib/",
+        imageUploadURL : getRootPath() + "/uploadfile", //文件提交请求路径
+        path: getRootPath() + "/vendor/editor/lib/",
         saveHTMLToTextarea: true
     });
 
@@ -65,7 +65,7 @@ function saveDetailText() {
 function submitBlogAddForm() {
     // 提交表单
     var form = document.forms[0];
-    form.action = "/admin/blogadd.f";
+    form.action = getRootPath() + "/admin/blogadd.f";
     form.method = "post";
     form.submit();
 }

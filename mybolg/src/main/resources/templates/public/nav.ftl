@@ -1,9 +1,10 @@
 <!-- Navigation -->
+<#assign basePath=request.contextPath>
 <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
     <#-- Logo 位置 -->
         <img class="mr-3" alt="Logo"
-             src="/img/logo.png" style="max-width: 30px">
+             src="${basePath}/img/logo.png" style="max-width: 30px">
         <a class="navbar-brand" href="#">
             MyBlog
         </a>
@@ -19,18 +20,18 @@
                     <a class="nav-link"><#-- 占位 --></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/">首页</a>
+                    <a class="nav-link" href="${basePath}/index">首页</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/post">博客</a>
+                    <a class="nav-link" href="${basePath}/post">博客</a>
                 </li>
                 <#if Session ["session_current_user"]??>  
 				    <li class="nav-item">
-	                    <a class="nav-link" href="/myblog/${Session ["session_current_user"].username}">我的博客</a>
+	                    <a class="nav-link" href="${basePath}/myblog/${Session ["session_current_user"].username}">我的博客</a>
 	                </li> 
 				</#if>
                 <li class="nav-item">
-                    <a class="nav-link" href="/resume">关于</a>
+                    <a class="nav-link" href="${basePath}/resume">关于</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"></a>
@@ -43,7 +44,7 @@
                 <li class="nav-item">
                 <#-- 用户头像位置 -->
                     <img class="img-circle"
-                         src="/img/logo.png"
+                         src="${basePath}//img/logo.png"
                          alt="头像"
                          style="max-width: 30px;"/>
                 </li>
@@ -53,17 +54,17 @@
                             class="caret"></span></a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="#">我的资料</a>
-                        <a class="dropdown-item" href="/user/blogmanage">博客管理</a>
+                        <a class="dropdown-item" href="${basePath}//user/blogmanage">博客管理</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/usersignout.c">注销登录</a>
+                        <a class="dropdown-item" href="${basePath}//usersignout.c">注销登录</a>
                     </div>
                 </li>
             <#else>
                 <li class="nav-item">
-                    <a class="nav-link" href="/userregister">注册</a>
+                    <a class="nav-link" href="${basePath}//userregister">注册</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/userlogin">登录</a>
+                    <a class="nav-link" href="${basePath}//userlogin">登录</a>
                 </li>
             </#if>
             </ul>

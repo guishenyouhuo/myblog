@@ -63,6 +63,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="js/public.js"></script>
 
   <#-- 自定义js -->
   <script src="js/f_register.js"></script>

@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="/css/public.css">
+<link rel="stylesheet" href="${basePath}/css/public.css">

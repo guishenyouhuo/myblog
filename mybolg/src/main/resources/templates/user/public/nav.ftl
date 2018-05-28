@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/post">我的博客</a>
+        <a class="navbar-brand" href="${basePath}/post">我的博客</a>
     </div>
 <#-- e 导航左侧-->
 
@@ -22,7 +22,7 @@
             <ul class="dropdown-menu dropdown-user">
                 <#--<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>-->
                 <#--</li>-->
-                <li><a href="/user/user_pwd_modify"><i class="fa fa-gear fa-fw"></i> 修改密码</a>
+                <li><a href="${basePath}/user/user_pwd_modify"><i class="fa fa-gear fa-fw"></i> 修改密码</a>
                 </li>
                 <li class="divider"></li>
                 <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> 注销登录</a>
@@ -42,16 +42,16 @@
                     <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> 博客管理<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="/user/blogadd"> 博客发布</a>
+                            <a href="${basePath}/user/blogadd"> 博客发布</a>
                         </li>
                         <li>
-                            <a href="/user/blogmanage"> 博客批量管理</a>
+                            <a href="${basePath}/user/blogmanage"> 博客批量管理</a>
                         </li>
                     </ul>
                     <!-nav.ftl.nav-second-level -->
                 </li>
                 <li>
-                    <a href="/user/user_manage"><i class="fa fa-edit fa-fw"></i>个人管理</a>
+                    <a href="${basePath}/user/user_manage"><i class="fa fa-edit fa-fw"></i>个人管理</a>
                 </li>
             </ul>
         </div>

@@ -1,3 +1,4 @@
+<#assign basePath=request.contextPath>
 <!DOCTYPE html>
 <html lang="zh">
 <#-- 后台用户登录 -->
@@ -11,11 +12,11 @@
     <title>${title!'MyBolg-后台登录'}</title>
 
     <!-- Bootstrap core CSS-->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${basePath}/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${basePath}/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template-->
-    <link href="../css/sb-admin/sb-admin.css" rel="stylesheet">
+    <link href="${basePath}/css/sb-admin/sb-admin.css" rel="stylesheet">
 </head>
 
 <body class="bg-dark">
@@ -51,13 +52,14 @@
     </div>
 </div>
 <!-- Bootstrap core JavaScript-->
-<script src="../vendor/jquery/jquery.min.js"></script>
-<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="${basePath}/vendor/jquery/jquery.min.js"></script>
+<script src="${basePath}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Core plugin JavaScript-->
-<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="${basePath}/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <#-- 自定义js -->
-<script src="../js/b_admin_userlogin.js"></script>
+<script src="${basePath}/js/b_admin_userlogin.js"></script>
+<script src="${basePath}/js/public.js"></script>
 </body>
 
 </html>

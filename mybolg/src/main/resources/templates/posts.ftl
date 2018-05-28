@@ -1,4 +1,6 @@
+<#assign basePath=request.contextPath>
 <html lang="zh">
+<#-- 取得 应用的绝对根路径 -->  
 <#-- 博客列表页 -->
 <head>
 
@@ -10,10 +12,10 @@
     <title>${articleTitle!'博客'}</title>
 
 <#-- EditorMD -->
-    <link href="/vendor/editor/css/editormd.css" rel="stylesheet">
+    <link href="${basePath}/vendor/editor/css/editormd.css" rel="stylesheet">
 
 <#-- landing-page -->
-    <link rel="stylesheet" href="/vendor/landing-page/landing-page.min.css">
+    <link rel="stylesheet" href="${basePath}/vendor/landing-page/landing-page.min.css">
 
 <#-- 自定义 样式 -->
 <#include "public/front_custom_css.ftl">
@@ -52,7 +54,7 @@
                     <#list postlist as post>
                         <div class="card mt-3">
                             <div class="card-body">
-                                <a href="/blog/${post.id!""}" class="text-dark" target="_blank"><h4
+                                <a href="${basePath}/blog/${post.id!""}" class="text-dark" target="_blank"><h4
                                         class="card-title font-weight-bold">${post.title!""}</h4>
                                 </a>
                                 <p class="card-text">${post.description}</p>
@@ -79,7 +81,7 @@
                     搜索文章
                 </div>
                 <div class="card-body">
-                    <form action="/postsearch">
+                    <form action="${basePath}/postsearch">
                         <div class="input-group">
                             <input name="name" type="text" class="form-control" placeholder="输入你想查找的题目..."
                                    aria-label="输入你想查找的题目...">
@@ -98,7 +100,7 @@
             <div class="card-body">
                 <#list taglist as tag>
                     <!-- tag -->
-                    <a href="/post?tagId=${tag.tagId!''}" target="_blank">
+                    <a href="${basePath}/post?tagId=${tag.tagId!''}" target="_blank">
                         <button type="button" class="btn btn-outline-primary mb-3">
                         ${tag.tagName!""} <span class="badge badge-primary">${tag.articleCount!""}</span>
                         </button>

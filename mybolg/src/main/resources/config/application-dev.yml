@@ -33,7 +33,7 @@ spring:
           paths: /**
         fixed:
           enabled: true
-          paths: /js/lib
+          paths: myblog/js/lib
           version: v12
     static-locations: classpath:/static/,classpath:/META-INF/resources/,classpath:/resources/,classpath:/public/
   datasource:
@@ -75,6 +75,7 @@ server:
           directory: D:\springboot\accesslog
           pattern: combined
           enabled: true
+  context-path: /myblog
   session:
     cookie:
       max-age: 1800

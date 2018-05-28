@@ -5,7 +5,7 @@
   <groupId>com.wangfei.blog</groupId>
   <artifactId>mybolg</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>mybolg Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
@@ -131,6 +131,7 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-tomcat</artifactId>
+      <scope>provided</scope>
     </dependency>
     <!-- 测试 -->
     <dependency>
@@ -182,6 +183,9 @@
             <directory>src/main/resources</directory>  
             <targetPath>${basedir}/target/classes</targetPath>
             <filtering>true</filtering>  
+            <excludes>
+	            <exclude>static/vendor/**/fonts/**</exclude>
+	        </excludes>
         </resource>  
         <resource>  
             <directory>src/main/java</directory>  
@@ -196,6 +200,15 @@
             </excludes>  
             <filtering>true</filtering>  
         </resource>
+        
+	    <resource>
+	        <directory>src/main/resources</directory>
+	        <targetPath>${basedir}/target/classes</targetPath>
+	        <filtering>false</filtering>
+	        <includes>
+	            <include>static/vendor/**/fonts/**</include>
+	        </includes>
+	    </resource>
     </resources>  
     <plugins>  
         <!-- java编译插件 -->  

@@ -1,7 +1,7 @@
-;!function () {
+layui.use('layer', function () {
     var layer = layui.layer,
         form = layui.form;
-}();
+});
 
 /**
  * 向指定 url 发送 get 请求
@@ -62,4 +62,10 @@ function formatStrLength(val, row, index) {
     val = val.substring(0,20);
     val += "...";
     return val;
+}
+
+function getRootPath() {
+	var strPath = window.document.location.pathname;
+	var postPath = strPath.substring(0, strPath.substr(1).indexOf('/') + 1);
+	return postPath;
 }

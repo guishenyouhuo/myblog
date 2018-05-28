@@ -1,7 +1,6 @@
+<#assign basePath=request.contextPath>
 <html lang="zh">
-
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -10,7 +9,7 @@
     <title>${article.title!'博客'}</title>
 
 <#-- EditorMD -->
-    <link href="/vendor/editor/css/editormd.css" rel="stylesheet">
+    <link href="${basePath}/vendor/editor/css/editormd.css" rel="stylesheet">
 
 <#-- 自定义 样式 -->
 <#include "public/front_custom_css.ftl">

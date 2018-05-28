@@ -1,3 +1,4 @@
+<#assign basePath=request.contextPath>
 <!DOCTYPE html>
 <html lang="zh">
 
@@ -12,19 +13,19 @@
     <title>MyBolg 系统后台管理</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../vendor/admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${basePath}/vendor/admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="../vendor/admin/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="${basePath}/vendor/admin/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../dist/admin/css/sb-admin-2.css" rel="stylesheet">
+    <link href="${basePath}/dist/admin/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="../vendor/admin/morrisjs/morris.css" rel="stylesheet">
+    <link href="${basePath}/vendor/admin/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../vendor/admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${basePath}/vendor/admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,7 +35,7 @@
     <![endif]-->
 
     <!-- 自定义样式 -->
-    <link rel="stylesheet" href="/css/public.css">
+    <link rel="stylesheet" href="${basePath}/css/public.css">
     <!-- 后台通用 css -->
     <#include "public/public_css.ftl">
 </head>
@@ -82,23 +83,23 @@
 </div>
 
 <!-- jQuery -->
-<script src="../vendor/admin/jquery/jquery.min.js"></script>
+<script src="${basePath}/vendor/admin/jquery/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="../vendor/admin/bootstrap/js/bootstrap.min.js"></script>
+<script src="${basePath}/vendor/admin/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Metis Menu Plugin JavaScript -->
-<script src="../vendor/admin/metisMenu/metisMenu.min.js"></script>
+<script src="${basePath}/vendor/admin/metisMenu/metisMenu.min.js"></script>
 
 <!-- Morris Charts JavaScript -->
-<script src="../vendor/admin/raphael/raphael.min.js"></script>
-<script src="../vendor/admin/morrisjs/morris.min.js"></script>
-<script src="../data/morris-data.js"></script>
+<script src="${basePath}/vendor/admin/raphael/raphael.min.js"></script>
+<script src="${basePath}/vendor/admin/morrisjs/morris.min.js"></script>
+<script src="${basePath}/data/morris-data.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="../dist/admin/js/sb-admin-2.js"></script>
-<script src="../js/public.js"></script>
-<script src="/js/b_admin_user_pwd_modify.js"></script>
+<script src="${basePath}/dist/admin/js/sb-admin-2.js"></script>
+<script src="${basePath}/js/public.js"></script>
+<script src="${basePath}/js/b_admin_user_pwd_modify.js"></script>
 <#-- 后台通用 js -->
 <#include "public/public_js.ftl">
 </body>

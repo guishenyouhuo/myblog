@@ -1,7 +1,6 @@
+<#assign basePath=request.contextPath>
 <html lang="zh">
-
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -27,7 +26,7 @@
     <div class="container">
     <#--<p class="text-center">${(msg)!"服务器需要冷静一下"}</p>-->
     <#--<p class="text-center">错误代码：${(code)!"未知错误"}</p>-->
-        <img  class="-align-center" src="/img/404.png" alt="" style="width:80%;">
+        <img  class="-align-center" src="${basePath}/img/404.png" alt="" style="width:80%;">
         <h2 class="m-3 text-center">${(msg)!"服务器需要冷静一下"}</h2>
         <h3 class="text-center">错误代码：${(code)!"未知错误"}</h3>
     </div>

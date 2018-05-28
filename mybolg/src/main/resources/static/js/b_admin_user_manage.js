@@ -20,7 +20,7 @@ var TableInit = function () {
     oTableInit.Init = function () {
         // 加载后台用户列表
         $('#id_table_blog').bootstrapTable({
-            url: '/admin/admin_user.j',          //请求后台的URL（*）
+            url: getRootPath() + '/admin/admin_user.j',          //请求后台的URL（*）
             method: 'get',                      //请求方式（*）
             toolbar: '#toolbar',                //工具按钮用哪个容器
             striped: true,                      //是否显示行间隔色
@@ -159,7 +159,7 @@ function deleteAdminUserInBulk() {
     // 注意：必须加 contentType: 'application/json'，否则 controller 中无法将 json 直接转换成对象
     $.ajax({
         type: "DELETE",
-        url: "/admin/admin_use_delete.j",
+        url: getRootPath() + "/admin/admin_use_delete.j",
         contentType: 'application/json',
         data: JSON.stringify(dataObj),
         success: function (result) {
@@ -176,7 +176,7 @@ function deleteAdminUserInBulk() {
  * 添加用户
  */
 function addAdminUser() {
-    c_location("/admin/blogadd");
+    c_location(getRootPath() + "/admin/blogadd");
 }
 
 /**
@@ -192,6 +192,6 @@ function modifyAdminUser() {
         msg("一个还不够你改的吗？选多啦");
     } else {
         id = dataSel[0].id;
-        c_location("/admin/blogmodify/" + id);
+        c_location(getRootPath() + "/admin/blogmodify/" + id);
     }
 }

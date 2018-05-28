@@ -1,4 +1,5 @@
 <#-- s 导航（顶部、左侧）-->
+<#assign basePath=request.contextPath>
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
 
 <#-- s 导航左侧 -->
@@ -22,7 +23,7 @@
             <ul class="dropdown-menu dropdown-user">
                 <#--<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>-->
                 <#--</li>-->
-                <li><a href="/admin/admin_user_pwd_modify"><i class="fa fa-gear fa-fw"></i> 修改密码</a>
+                <li><a href="${basePath}/admin/admin_user_pwd_modify"><i class="fa fa-gear fa-fw"></i> 修改密码</a>
                 </li>
                 <li class="divider"></li>
                 <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> 注销登录</a>
@@ -42,19 +43,19 @@
                     <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> 博客管理<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="/admin/blogadd"> 博客发布</a>
+                            <a href="${basePath}/admin/blogadd"> 博客发布</a>
                         </li>
                         <li>
-                            <a href="/admin/blogmanage"> 博客批量管理</a>
+                            <a href="${basePath}/admin/blogmanage"> 博客批量管理</a>
                         </li>
                     </ul>
                     <!-nav.ftl.nav-second-level -->
                 </li>
                 <li>
-                    <a href="/admin/resume_modify"><i class="fa fa-table fa-fw"></i> 简历管理</a>
+                    <a href="${basePath}/admin/resume_modify"><i class="fa fa-table fa-fw"></i> 简历管理</a>
                 </li>
                 <li>
-                    <a href="/admin/admin_user_manage"><i class="fa fa-edit fa-fw"></i> 用户管理</a>
+                    <a href="${basePath}/admin/admin_user_manage"><i class="fa fa-edit fa-fw"></i> 用户管理</a>
                 </li>
             </ul>
         </div>

@@ -7,7 +7,7 @@ $(function () {
         width: "100%",
         height: 640,
         syncScrolling: "single",
-        path: "/vendor/editor/lib/",
+        path: getRootPath() + "/vendor/editor/lib/",
         saveHTMLToTextarea: true
     });
 
@@ -52,12 +52,12 @@ function submitBlogAddForm() {
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "/update_resume.f",
+        url: getRootPath() + "/update_resume.f",
         data: $("#id_form_resume").serialize(),
         success: function (result) {
             if (!(result.hasError)) {
                 // 返回博客批量管理页
-                c_location("/admin/blogmanage");
+                c_location(getRootPath() + "/admin/blogmanage");
             } else {
                 msg("修改失败");
             }

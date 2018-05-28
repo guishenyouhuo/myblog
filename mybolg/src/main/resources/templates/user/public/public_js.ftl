@@ -1,1 +1,1 @@
-<script src="/vendor/layui/layui.all.js"></script>
+<script src="${basePath}/vendor/layui/layui.all.js"></script>

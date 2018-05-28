@@ -1,6 +1,6 @@
+<#assign basePath=request.contextPath>
 <html lang="zh">
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -9,7 +9,7 @@
     <title>${title!'首页'}</title>
 
     <!-- Custom styles for this template -->
-    <link href="/css/full-slider/full-slider.css" rel="stylesheet">
+    <link href="${basePath}/css/full-slider/full-slider.css" rel="stylesheet">
 
 <#-- 自定义 样式 -->
 <#include "public/front_custom_css.ftl">

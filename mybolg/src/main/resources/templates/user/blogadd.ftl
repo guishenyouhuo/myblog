@@ -1,3 +1,4 @@
+<#assign basePath=request.contextPath>
 <!DOCTYPE html>
 <html lang="zh">
 <#-- 写博客 -->
@@ -37,7 +38,7 @@
     <![endif]-->
 
     <!-- 自定义样式 -->
-    <link rel="stylesheet" href="/css/public.css">
+    <link rel="stylesheet" href="${basePath}/css/public.css">
 </head>
 
 <body>

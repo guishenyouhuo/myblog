@@ -5,15 +5,15 @@
             <div class="col-lg-6 text-center text-lg-left my-auto">
                 <ul class="list-inline mb-2 text-white">
                     <li class="list-inline-item">
-                        <a href="/" class="text-white">首页</a>
+                        <a href="${basePath}/index" class="text-white">首页</a>
                     </li>
                     <li class="list-inline-item">&sdot;</li>
                     <li class="list-inline-item">
-                        <a href="/post" class="text-white">博客</a>
+                        <a href="${basePath}/post" class="text-white">博客</a>
                     </li>
                     <li class="list-inline-item">&sdot;</li>
                     <li class="list-inline-item">
-                        <a href="/resume" class="text-white">关于</a>
+                        <a href="${basePath}/resume" class="text-white">关于</a>
                     </li>
                     <li class="list-inline-item">&sdot;</li>
                     <li class="list-inline-item">
@@ -38,7 +38,7 @@
                         </a>
                     </li>
                 <#-- wechat -->
-                    <img id="id_img_wechat_qrcode" src="/img/wechat_qr.png" alt="Wechat" class="img_shadow"
+                    <img id="id_img_wechat_qrcode" src="${basePath}/img/wechat_qr.png" alt="Wechat" class="img_shadow"
                          style="display:none;width: 200px;position: absolute;bottom: 50px;right: 0;">
                     <li class="list-inline-item">
                         <a class="text-white" id="id_a_wechat">

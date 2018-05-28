@@ -42,7 +42,7 @@ public class UploadController extends BaseController{
 
 	          //下面response返回的json格式是editor.md所限制的，规范输出就OK
 	          response.setCharacterEncoding("utf-8");
-	          response.getWriter().write( "{\"success\": 1, \"message\":\"上传成功\",\"url\":\"/showPic/" + attach.getOriginalFilename() + "\"}" );
+	          response.getWriter().write( "{\"success\": 1, \"message\":\"上传成功\",\"url\":\"" + request.getContextPath() + "/showPic/" + attach.getOriginalFilename() + "\"}" );
 	      } catch (Exception e) {
 	          try {
 	              response.getWriter().write( "{\"success\":0}" );

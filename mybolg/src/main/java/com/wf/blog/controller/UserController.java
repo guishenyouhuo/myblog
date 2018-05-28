@@ -82,6 +82,6 @@ public class UserController extends BaseController {
 	@GetMapping("/usersignout.c")
 	public String cFrontUserSignout(HttpServletRequest request) {
 		mUserService.destroySession(request);
-		return "redirect:index";
+		return "redirect:/index";
 	}
 }
