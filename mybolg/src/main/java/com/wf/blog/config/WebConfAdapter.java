@@ -1,6 +1,7 @@
 package com.wf.blog.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -31,6 +32,9 @@ public class WebConfAdapter extends WebMvcConfigurerAdapter {
 
 	@Autowired
 	private UserAuthenticationInterceptor userSecurityInterceptor;
+	
+	@Value("${web.upload.path}")
+    private String uploadPath;
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
@@ -52,9 +56,12 @@ public class WebConfAdapter extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		super.addResourceHandlers(registry);
 		// 配置静态资源路径
 		registry.addResourceHandler("/**").addResourceLocations(
 				"classpath:static/");
+		registry.addResourceHandler("/showPic/**").addResourceLocations(
+                "file:" + uploadPath);
 	}
 
 	@Override

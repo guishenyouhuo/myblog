@@ -4,7 +4,7 @@ spring:
   cache:
     cache-names: ehcache
     ehcache:
-      config: ehcache.xml
+      config: config/ehcache.xml
   devtools:
     restart:
       enabled: true
@@ -75,14 +75,18 @@ server:
           directory: /usr/myProjects/springboot/accesslog
           pattern: combined
           enabled: true
+  context-path: /myblog
   session:
     cookie:
       max-age: 1800
 
 logging:
-    config: classpath:logback.xml
+    config: classpath:config/logback.xml
 
 mybatis:
     type-aliases-package: com.wf.blog.entity
     mapper-locations: classpath:mybatis/mapping/*.xml
 
+web:
+  upload:
+     path: /var/webfiles/upload/imgfiles/

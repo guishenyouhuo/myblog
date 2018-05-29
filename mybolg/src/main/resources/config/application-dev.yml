@@ -33,7 +33,7 @@ spring:
           paths: /**
         fixed:
           enabled: true
-          paths: myblog/js/lib
+          paths: /js/lib
           version: v12
     static-locations: classpath:/static/,classpath:/META-INF/resources/,classpath:/resources/,classpath:/public/
   datasource:
@@ -86,4 +86,8 @@ logging:
 mybatis:
     type-aliases-package: com.wf.blog.entity
     mapper-locations: classpath:mybatis/mapping/*.xml
+
+web:
+  upload:
+     path: E:\webUpload\
 
