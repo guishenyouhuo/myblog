@@ -21,7 +21,6 @@ import java.util.List;
 
 /**
  * WEB MVC 配置
- *
  * @author guishenyouhuo
  */
 @Configuration
