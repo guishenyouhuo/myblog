@@ -35,26 +35,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class ResumeController extends BaseController {
 
-  @Autowired
-  private IResumeService mResumeService;
+    @Autowired
+    private IResumeService mResumeService;
 
-  @ModelAttribute
-  public Resume createResume() {
-    return new Resume();
-  }
+    @ModelAttribute
+    public Resume createResume() {
+        return new Resume();
+    }
 
-  @GetMapping("/resume")
-  public String getResume(Model model) {
-    Resume resume = mResumeService.getResume();
-    model.addAttribute("article", resume);
-    return "resume";
-  }
+    @GetMapping("/resume")
+    public String getResume(Model model) {
+        Resume resume = mResumeService.getResume();
+        model.addAttribute("article", resume);
+        return "resume";
+    }
 
 
-  @PostMapping("/update_resume.f")
-  @ResponseBody
-  public Object updateResume(ResumeModifyForm form, @ModelAttribute(binding = false) Resume resume) {
-    mResumeService.updateResume(form, resume);
-    return responseSimpleOK();
-  }
+    @PostMapping("/update_resume.f")
+    @ResponseBody
+    public Object updateResume(ResumeModifyForm form, @ModelAttribute(binding = false) Resume resume) {
+        mResumeService.updateResume(form, resume);
+        return responseSimpleOK();
+    }
 }
